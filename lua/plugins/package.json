@@ -1,0 +1,6 @@
+{
+  "packageManager": "yarn@4.3.0",
+  "dependencies": {
+    "ci": "^2.3.0"
+  }
+}

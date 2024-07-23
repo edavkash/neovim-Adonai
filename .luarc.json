@@ -1,0 +1,9 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "get_macro_recording_status"
+    ],
+    "diagnostics.disable": [
+        "unused-local"
+    ]
+}

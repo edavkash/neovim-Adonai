@@ -1,0 +1,26 @@
+return {
+	"aurum77/live-server.nvim",
+	run = function()
+		require("live_server.util").install()
+	end,
+	cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
+	config = function()
+		local status_ok, live_server = pcall(require, "live_server")
+		if not status_ok then
+			return
+		end
+
+		live_server.setup({
+			port = 8080, -- Port number for live-server
+			browser_command = "msedge", -- Command to open Microsoft Edge
+			quiet = false, -- Output log messages (false for debugging)
+			no_css_inject = false, -- Enable CSS injection
+			install_path = vim.fn.stdpath("config") .. "/live-server/", -- Installation path
+		})
+
+		-- Define nnoremap command to start/stop LiveServer
+		vim.api.nvim_create_user_command("LiveServer", function()
+			vim.cmd("belowright split | terminal live-server")
+		end, {})
+	end,
+}

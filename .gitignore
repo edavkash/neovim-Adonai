@@ -1,0 +1,61 @@
+# Ignore Neovim specific backup and swap files
+*.swp
+*.swo
+*.swn
+*.un~
+*.tmp
+*.bak
+
+# Ignore Neovim specific directories
+nvim/backups/
+nvim/undo/
+nvim/swap/
+nvim/sessions/
+nvim/view/
+
+# Ignore Neovim plugin manager directories
+pack/*/opt/*
+pack/*/start/*
+
+# Ignore Neovim plugins (depending on the plugin manager)
+plugged/
+bundle/
+dein/cache_nvim/
+dein/state_nvim.vim
+dein/.cache/
+dein/.log/
+dein/.state/
+site/
+autoload/plug.vim
+autoload/plugged/
+.vim/
+.vimrc
+
+# Ignore LSP server files
+.lsp/
+
+# Ignore Lua Language Server files
+.lua-language-server/
+
+# Ignore Python virtual environment (for Neovim's python support)
+venv/
+
+# Ignore PowerShell specific files
+*.ps1xml
+*.psc1
+*.psm1
+*.psd1
+*.ps1
+
+# Ignore PowerShell Module directories
+PowerShell/Modules/
+PowerShell/Scripts/
+
+# Ignore PowerShell cache files
+*.cache
+*.log
+
+# Ignore specific directories for PowerShell and Neovim configurations
+PowerShell/Profiles/
+PowerShell/Sessions/
+

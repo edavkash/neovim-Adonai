@@ -1,0 +1,13 @@
+return {
+	"stevearc/oil.nvim", -- Plugin name or repository
+	config = function()
+		local oil = require("oil")
+		oil.setup()
+
+		-- Set key mappings using vim.keymap.set
+		vim.keymap.set("n", "<leader>-", oil.toggle_float, {})
+		vim.keymap.set("n", "<leader>d", function()
+			vim.cmd('lua require("oil").file_manager.cd()')
+		end, { silent = true })
+	end,
+}
