@@ -7,10 +7,15 @@ return {
 		configs.setup({
 			ensure_installed = { "lua", "vim", "javascript", "html", "tsx", "typescript", "python", "json" },
 			sync_install = false,
-			highlight = { enable = true },
-			indent = { enable = true },
+			highlight = {
+				enable = true,
+				disable = { "help" },  -- Disable Treesitter for help files
+			},
+			indent = {
+				enable = true,
+				disable = { "help" },  -- Disable Treesitter for help files
+			},
 		})
 	end,
 }
-
 
