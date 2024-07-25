@@ -1,35 +1,54 @@
-return{
-    "rebelot/kanagawa.nvim",
-    config=function ()
-        -- Default options:
-require('kanagawa').setup({
-    compile = false,             -- enable compiling the colorscheme
-    undercurl = true,            -- enable undercurls
-    commentStyle = { italic = true },
-    functionStyle = {},
-    keywordStyle = { italic = true},
-    statementStyle = { bold = true },
-    typeStyle = {},
-    transparent = false,         -- do not set background color
-    dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
-    terminalColors = true,       -- define vim.g.terminal_color_{0,17}
-    colors = {                   -- add/modify theme and palette colors
-        palette = {},
-        theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
-    },
-    overrides = function(colors) -- add/modify highlights
-        return {}
-    end,
-    theme = "wave",              -- Load "wave" theme when 'background' option is not set
-    background = {               -- map the value of 'background' option to a theme
-        dark = "wave",           -- try "dragon" !
-        light = "lotus"
-    },
-})
+return {
+	"rebelot/kanagawa.nvim",
+	config = function()
+		require("kanagawa").setup({
+			compile = false, -- Enable compiling the colorscheme
+			undercurl = true, -- Enable undercurls
+			commentStyle = { italic = true }, -- Italicize comments
+			keywordStyle = { italic = true }, -- Italicize keywords
+			statementStyle = { bold = true }, -- Bold statements
+			transparent = false, -- Do not set background color
+			dimInactive = false, -- Do not dim inactive windows
+			terminalColors = true, -- Define terminal colors
+			colors = {
+				palette = {
+					sumiInk0 = "#000000", -- Custom black color
+					fujiWhite = "#FFFFFF", -- Custom white color
+				},
+				theme = {
+					wave = {
+						ui = {
+							float = {
+								bg = "none", -- No background for floating windows
+							},
+						},
+					},
+					dragon = {
+						syn = {
+							parameter = "yellow", -- Yellow color for parameters in dragon theme
+						},
+					},
+					all = {
+						ui = {
+							bg_gutter = "none", -- No background for gutter
+						},
+					},
+				},
+			},
+			overrides = function(colors) -- Additional highlight overrides
+				return {}
+			end,
+			theme = "wave", -- Default theme
+			background = { -- Map 'background' option to theme
+				dark = "wave", -- Dark mode theme
+				light = "lotus", -- Light mode theme
+			},
+		})
 
--- setup must be called before loading
-vim.cmd("colorscheme kanagawa-wave")
---vim.cmd("colorscheme kanagawa-dragon")
---vim.cmd("colorscheme kanagawa-lotus")
-    end
+		-- Set the colorscheme
+		vim.cmd("colorscheme kanagawa-wave")
+        --vim.cmd("colorscheme kanagawa-dragon")
+		--vim.cmd("colorscheme kanagawa-lotus")
+	end,
 }
+
