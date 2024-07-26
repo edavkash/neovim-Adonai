@@ -55,3 +55,23 @@ vim.cmd([[
 ]])
 
 vim.cmd('filetype plugin indent on')
+
+-- A terminal focus function
+-- Automatically enter insert mode when opening a terminal
+vim.api.nvim_create_autocmd("TermOpen", {
+  pattern = "*",
+  command = "startinsert",
+})
+
+--transparent background
+function Font_color(color)
+    vim.cmd.colorscheme(color) -- Apply the color scheme
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" }) -- Set Normal background to none
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" }) -- Set NormalFloat background to none
+end
+
+-- Call the function with a specific color scheme
+Font_color('tokyonight')
+
+--Explore/Netrw keymap 
+vim.keymap.set('n','<leader>ex',vim.cmd.Ex)

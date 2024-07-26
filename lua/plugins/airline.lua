@@ -15,7 +15,7 @@ return {
         require('lualine').setup {
             options = {
                 icons_enabled = true,
-                theme = 'powerline_dark', -- Set theme
+                theme = 'auto', -- Set theme
                 component_separators = { left = '|', right = '|' }, -- Separators between components
                 section_separators = { left = '', right = '' }, -- No section separators
                 disabled_filetypes = {
