@@ -66,7 +66,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
 --transparent background
 function Font_color(color)
     vim.cmd.colorscheme(color) -- Apply the color scheme
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" }) -- Set Normal background to none
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" ,bold=true}) -- Set Normal background to none
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" }) -- Set NormalFloat background to none
 end
 
