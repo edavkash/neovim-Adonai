@@ -15,7 +15,5 @@ require("lazy").setup("plugins")
 
 --Load settings
 require("settings")
-
--- Map key to open PowerShell terminal at the bottom
---:vim.api.nvim_set_keymap('n', '<leader>t', ':lua OpenPwshTerminal()<CR>', { noremap = true, silent = true })
+require("terminal")
 
