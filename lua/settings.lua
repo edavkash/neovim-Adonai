@@ -1,6 +1,6 @@
 -- Set tabs and spaces
-vim.opt.tabstop = 4 -- Number of visual spaces per TAB
-vim.opt.shiftwidth = 4 -- Number of spaces to use for auto-indenting
+vim.opt.tabstop = 4      -- Number of visual spaces per TAB
+vim.opt.shiftwidth = 4   -- Number of spaces to use for auto-indenting
 vim.opt.expandtab = true -- Use spaces instead of tabs
 -- Enable undofile
 vim.o.undofile = true
@@ -32,9 +32,6 @@ vim.opt.hlsearch = true
 -- Enable syntax highlighting
 vim.cmd("syntax enable")
 
--- Set colorscheme (optional)
---vim.cmd('colorscheme desert')  -- Replace 'desert' with your preferred colorscheme
-
 -- Set auto-indentation
 vim.opt.autoindent = true
 
@@ -54,24 +51,23 @@ vim.cmd([[
   autocmd FileType help setlocal syntax=help
 ]])
 
-vim.cmd('filetype plugin indent on')
+vim.cmd("filetype plugin indent on")
 
 -- A terminal focus function
 -- Automatically enter insert mode when opening a terminal
 vim.api.nvim_create_autocmd("TermOpen", {
-  pattern = "*",
-  command = "startinsert",
+    pattern = "*",
+    command = "startinsert",
 })
 
 --transparent background
 function Font_color(color)
     vim.cmd.colorscheme(color) -- Apply the color scheme
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" ,bold=true}) -- Set Normal background to none
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" }) -- Set NormalFloat background to none
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none", bold = true })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
--- Call the function with a specific color scheme
-Font_color('tokyonight')
+Font_color("kanagawa")
 
---Explore/Netrw keymap 
-vim.keymap.set('n','<leader>ex',vim.cmd.Ex)
+--Explore/Netrw keymap
+vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
