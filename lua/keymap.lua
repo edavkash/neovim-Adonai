@@ -40,6 +40,7 @@ vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, {})
 vim.keymap.set('n','<leader>gf',vim.lsp.buf.format,{})
 
 --Keymap for telescope
+local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
