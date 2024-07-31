@@ -16,4 +16,4 @@ require("lazy").setup("plugins")
 --Load settings
 require("settings")
 require("terminal")
-
+require("keymap")

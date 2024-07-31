@@ -58,9 +58,6 @@ return {
 				capabilities = capabilities,
 				filetypes = { "ps1", "psm1", "psd1" },
 			})
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-			vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, {})
 		end,
 	},
 }

@@ -1,9 +1,11 @@
 {
     "diagnostics.globals": [
         "vim",
-        "get_macro_recording_status"
+        "get_macro_recording_status",
+        "normal_keys"
     ],
     "diagnostics.disable": [
-        "unused-local"
+        "unused-local",
+        "undefined-global"
     ]
 }
