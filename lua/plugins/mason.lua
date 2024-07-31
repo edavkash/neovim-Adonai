@@ -1,5 +1,4 @@
 return {
-
 	{
 		"williamboman/mason.nvim",
 		config = function()
@@ -28,12 +27,16 @@ return {
 		config = function()
 			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local mason_registry = require("mason-registry")
+			local powershell_package = mason_registry.get_package("powershell-editor-services")
+			local bundle_path = powershell_package:get_install_path()
+
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
-			}) --Ctrl+X+O
+			}) -- Ctrl+X+O
 			lspconfig.html.setup({
 				capabilities = capabilities,
 			})
@@ -50,7 +53,10 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.powershell_es.setup({
+				bundle_path = bundle_path,
+				shell = "pwsh", -- or "powershell" depending on your environment
 				capabilities = capabilities,
+				filetypes = { "ps1", "psm1", "psd1" },
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
@@ -58,3 +64,4 @@ return {
 		end,
 	},
 }
+
