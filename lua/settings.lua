@@ -72,3 +72,5 @@ Font_color("kanagawa")
 --Font_color("gruvbox")
 --Font_color("rosepine")
 
+--For html and CSS
+vim.g.user_emmet_leader_key = '<C-Z>'
