@@ -1,0 +1,19 @@
+return{
+  "folke/tokyonight.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {
+    style = "storm", -- Use the "storm" variant of the theme
+    transparent = true, -- Enable transparent background
+    terminal_colors = true, -- Set terminal colors
+    styles = {
+      comments = "italic", -- Italicize comments
+      keywords = "bold", -- Bold keywords
+    },
+    sidebars = { "qf", "vista_kind", "terminal"  }, -- List of sidebars to customize
+  },
+    config = function ()
+        vim.cmd("colorscheme tokyonight")
+    end
+}
+
