@@ -67,7 +67,14 @@ function Font_color(color)
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
-Font_color("kanagawa")
 
+
+
+
+Font_color("kanagawa")
+--Font_color("catppuccin")
+--Font_color("tokyonight")
+--Font_color("gruvbox")
+--Font_color("rosepine")
 --Explore/Netrw keymap
 vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
