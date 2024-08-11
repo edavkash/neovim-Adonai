@@ -18,6 +18,7 @@ return {
 					"quick_lint_js",
                     "jsonls",
 					"tailwindcss",
+                    "graphql",
 					"powershell_es",
 				},
 			})
