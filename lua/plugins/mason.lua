@@ -38,7 +38,6 @@ return {
 			})
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
-			}) -- Ctrl+X+O
 			lspconfig.html.setup({
 				capabilities = capabilities,
 			})
