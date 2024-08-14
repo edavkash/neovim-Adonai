@@ -12,13 +12,17 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"tsserver",
+                    "eslint",
 					"html",
 					"cssls",
 					"pyright",
 					"quick_lint_js",
-                    "jsonls",
+					"jsonls",
 					"tailwindcss",
-                    "graphql",
+					"graphql",
+                    "grammarly",
+                    "dockerls",
+                    "docker_compose_language_service",
 					"powershell_es",
 				},
 			})
@@ -38,6 +42,10 @@ return {
 			})
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
+			})
+            lspconfig.eslint.setup({
+                capabilities=capabilities,
+            })
 			lspconfig.html.setup({
 				capabilities = capabilities,
 			})
@@ -50,12 +58,24 @@ return {
 			lspconfig.quick_lint_js.setup({
 				capabilities = capabilities,
 			})
-            lspconfig.jsonls.setup({
-                capabilities = capabilities,
-            })
+			lspconfig.jsonls.setup({
+				capabilities = capabilities,
+			})
 			lspconfig.tailwindcss.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.graphql.setup({
+				capabilities = capabilities,
+			})
+            lspconfig.grammarly.setup({
+                capabilities=capabilities,
+            })
+            lspconfig.dockerls.setup({
+                capabilities=capabilities,
+            })
+            lspconfig.docker_compose_language_service.setup({
+                capabilities =capabilities,
+            })
 			lspconfig.powershell_es.setup({
 				bundle_path = bundle_path,
 				shell = "pwsh", -- or "powershell" depending on your environment
@@ -65,4 +85,3 @@ return {
 		end,
 	},
 }
-
