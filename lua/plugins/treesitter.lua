@@ -19,6 +19,7 @@ return {
                 "xml",
                 "http",
                 "graphql",
+                "dockerfile"
             },
             --auto_install = true,
             sync_install = false,
