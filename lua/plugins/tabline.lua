@@ -13,7 +13,7 @@ return {
 				show_tabs_always = false, -- this shows tabs only when there are more than one tab or if the first tab is named
 				show_devicons = true, -- this shows devicons in buffer section
 				show_bufnr = false, -- this appends [bufnr] to buffer section,
-				show_filename_only = false,
+				show_filename_only = true,
                 modified_icon = "+ ",
                 modified_italic = false,
                 show_tabs_only = false,
