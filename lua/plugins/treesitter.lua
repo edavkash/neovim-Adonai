@@ -1,38 +1,35 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
-	build = ":TSUpdate",
-	config = function()
-		local configs = require("nvim-treesitter.configs")
-
-		configs.setup({
-			ensure_installed = {
-				"vimdoc",
-				"lua",
-				"vim",
-				"javascript",
-				"html",
-				"tsx",
-				"typescript",
-				"python",
-				"json",
-				"powershell",
-				"xml",
-				"http",
-				"graphql",
-				"dockerfile",
-				"markdown",
-				"markdown_inline",
-			},
-			--auto_install = true,
-			sync_install = false,
-			highlight = {
-				enable = true,
-				disable = { "help" }, -- Disable Treesitter for help files
-			},
-			indent = {
-				enable = true,
-				disable = { "help" }, -- Disable Treesitter for help files
-			},
-		})
-	end,
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+        require("nvim-treesitter.configs").setup({
+            ensure_installed = {  -- Specify individual parsers here
+                "vimdoc",
+                "lua",
+                "vim",
+                "javascript",
+                "html",
+                "tsx",
+                "typescript",
+                "python",
+                "json",
+                "powershell",
+                "xml",
+                "http",
+                "graphql",
+                "dockerfile",
+            },
+            sync_install = false,
+            auto_install = true,
+            highlight = {
+                enable = true,
+                disable = {},  -- List of languages to disable
+            },
+            indent = {
+                enable = true,
+                disable = {},  -- List of languages to disable
+            },
+        })
+    end,
 }
+

@@ -6,6 +6,7 @@
     ],
     "diagnostics.disable": [
         "unused-local",
-        "undefined-global"
+        "undefined-global",
+        "need-check-nil"
     ]
 }

@@ -49,3 +49,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 --Flaoterm keymap
 vim.keymap.set("n", "<leader>fn", function() vim.cmd("FloatermToggle") end)
 
+--Moving through panes
+
+

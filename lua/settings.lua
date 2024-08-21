@@ -66,6 +66,7 @@ function Font_color(color)
     vim.api.nvim_set_hl(0, "Normal", { bg = "none", bold = true })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
+--Font_color("cyberdream")
 Font_color("kanagawa")
 --Font_color("catppuccin")
 --Font_color("tokyonight")
@@ -74,3 +75,6 @@ Font_color("kanagawa")
 
 --For html and CSS
 vim.g.user_emmet_leader_key = '<C-Z>'
+
+
+

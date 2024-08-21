@@ -1,4 +1,4 @@
-# Neovim setup 
+[#](#) Neovim setup 
 This configuration work best for (pwsh) powershell and should be cloned at the AppData/Local directory, but  if you are a mac or Linux user I will recommend you to create .config directory and then clone it their. 
 
 # Window
