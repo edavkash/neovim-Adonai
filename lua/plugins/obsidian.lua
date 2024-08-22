@@ -12,11 +12,7 @@ return {
         workspaces = {
             {
                 name = "Notebook",
-                path = "C:/Users/DAVID/vault/Notebook",
-            },
-            {
-                name = "work",
-                path = "~/vaults/work",
+                path = "C:/Users/DAVID",
             },
         },
         completion = {

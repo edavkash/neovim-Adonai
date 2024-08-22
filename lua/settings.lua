@@ -1,10 +1,12 @@
 -- Set tabs and spaces
-vim.opt.tabstop = 4      -- Number of visual spaces per TAB
-vim.opt.shiftwidth = 4   -- Number of spaces to use for auto-indenting
+vim.opt.tabstop = 4 -- Number of visual spaces per TAB
+vim.opt.shiftwidth = 4 -- Number of spaces to use for auto-indenting
 vim.opt.expandtab = true -- Use spaces instead of tabs
 -- Enable undofile
 vim.o.undofile = true
-
+--Jupyter setup
+vim.g.jupyter_highlight_cells = 1
+vim.g.jupyter_cell_separators = true
 -- Enable line numbers
 vim.opt.number = true
 
@@ -56,16 +58,17 @@ vim.cmd("filetype plugin indent on")
 -- A terminal focus function
 -- Automatically enter insert mode when opening a terminal
 vim.api.nvim_create_autocmd("TermOpen", {
-    pattern = "*",
-    command = "startinsert",
+	pattern = "*",
+	command = "startinsert",
 })
 
 --transparent background
 function Font_color(color)
-    vim.cmd.colorscheme(color) -- Apply the color scheme
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none", bold = true })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	vim.cmd.colorscheme(color)
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none", bold = true })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
+
 --Font_color("cyberdream")
 Font_color("kanagawa")
 --Font_color("catppuccin")
@@ -74,7 +77,4 @@ Font_color("kanagawa")
 --Font_color("rosepine")
 
 --For html and CSS
-vim.g.user_emmet_leader_key = '<C-Z>'
-
-
-
+vim.g.user_emmet_leader_key = "<C-Z>"

@@ -7,6 +7,7 @@
     "diagnostics.disable": [
         "unused-local",
         "undefined-global",
-        "need-check-nil"
+        "need-check-nil",
+        "duplicate-index"
     ]
 }

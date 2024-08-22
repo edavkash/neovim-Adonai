@@ -4,6 +4,7 @@ return {
 	config = function()
 		require("nvim-treesitter.configs").setup({
 			ensure_installed = {
+                "gitcommit",
 				"vimdoc",
 				"lua",
 				"vim",
@@ -18,6 +19,8 @@ return {
 				"http",
 				"graphql",
 				"dockerfile",
+                "sql",
+                "git_rebase"
 			},
 			sync_install = false,
 			auto_install = true,
