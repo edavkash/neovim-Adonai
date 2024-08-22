@@ -14,7 +14,7 @@ vim.keymap.set("n", "<leader>gh", ":Gitsigns.preview_hunk<CR>", {})
 --1. Adding a file in file in harpoon
 vim.keymap.set("n", "<leader>af", ':lua require("harpoon.mark").add_file()<CR>', { noremap = true, silent = true })
 
---2. Toggling openning/closing harpoon UI
+--2. Toggling (openning/closing) harpoon UI
 vim.keymap.set("n","<leader>h",':lua require("harpoon.ui").toggle_quick_menu()<CR>',{ noremap = true, silent = true })
 
 --3.Navigate to the next bookamrk 
