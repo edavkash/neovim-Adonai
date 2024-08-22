@@ -23,10 +23,10 @@ vim.keymap.set(
 )
 
 --3.Navigate to the next bookamrk
-vim.keymap.set("n", "<leader>hn", ':lua require("harpoon.ui").nav_next()<CR>', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader><Down>", ':lua require("harpoon.ui").nav_next()<CR>', { noremap = true, silent = true })
 
 --4.Navigate to the previous bookmark
-vim.keymap.set("n", "<leader>hp", ':lua require("harpoon.ui").nav_prev()<CR>', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader><Up>", ':lua require("harpoon.ui").nav_prev()<CR>', { noremap = true, silent = true })
 
 --5. keymap to open lazygit
 vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", { noremap = true, silent = true })
