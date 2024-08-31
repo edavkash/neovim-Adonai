@@ -17,7 +17,7 @@ return {
                 icons_enabled = true,
                 theme = 'powerline_dark', -- Set theme
                 component_separators = { left = '|', right = '|' }, -- Separators between components
-                section_separators = { left = '', right = '' }, -- No section separators
+                section_separators = { left = '|', right = '|' }, -- section separators
                 disabled_filetypes = {
                     statusline = {}, -- Disable for specific filetypes in statusline
                     winbar = {}, -- Disable for specific filetypes in winbar

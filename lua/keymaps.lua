@@ -50,6 +50,9 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+vim.keymap.set("n", "<leader>fs", builtin.git_status, {})
+vim.keymap.set("n", "<leader>fc", builtin.git_commits, {})
+vim.keymap.set("n", "<space>fb", builtin.git_branches, {})
 
 --Flaoterm keymap
 vim.keymap.set("n", "<leader>fn", function()
@@ -59,3 +62,7 @@ end)
 --Moving through panes
 vim.keymap.set("n", "<space>l", "<C-w>l", { noremap = true, silent = true })
 vim.keymap.set("n", "<space>h", "<C-w>h", { noremap = true, silent = true })
+
+--Opening the treesitter playeground
+vim.keymap.set("n", "<leader>i", vim.cmd.InspectTree)
+vim.keymap.set("n", "<leader>eq", vim.cmd.EditQuery)
