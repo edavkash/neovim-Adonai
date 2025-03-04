@@ -2,7 +2,7 @@
 This configuration work best for (pwsh) powershell and should be cloned at the AppData/Local directory, but  if you are a mac or Linux user I will recommend you to create .config directory and then clone it their. 
 
 Paste the following in init.lua file
-
+```lua
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({
@@ -23,7 +23,7 @@ require("settings")
 require("terminal")
 require("keymaps")
 require("statusline")
-
+```
 
 
 # Window
