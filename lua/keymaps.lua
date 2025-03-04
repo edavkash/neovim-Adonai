@@ -114,6 +114,12 @@ vim.keymap.set('n', '<leader>B', function()
   dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
 end, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>dl', dap.run_last, { noremap = true, silent = true })
+<<<<<<< HEAD
 ]]
 --
 >>>>>>> d6ad35e (latest commit)
+=======
+]]--
+
+
+>>>>>>> 86bb19c (second commit)
