@@ -1,6 +1,6 @@
 -- Set tabs and spaces
-vim.opt.tabstop = 4 -- Number of visual spaces per TAB
-vim.opt.shiftwidth = 4 -- Number of spaces to use for auto-indenting
+vim.opt.tabstop = 4      -- Number of visual spaces per TAB
+vim.opt.shiftwidth = 4   -- Number of spaces to use for auto-indenting
 vim.opt.expandtab = true -- Use spaces instead of tabs
 -- Enable undofile
 vim.o.undofile = true
@@ -37,24 +37,21 @@ vim.cmd("syntax enable")
 -- Set auto-indentation
 vim.opt.autoindent = true
 
-<<<<<<< HEAD
 --lagging
 vim.o.ttyfast = true
 vim.o.lazyredraw = true
 vim.o.updatetime = 100
 
-=======
->>>>>>> 14cc39b1f492a2f784fa4a524f5ba04c8fd8afc8
 -- Enable mouse support (optional)
 vim.opt.mouse = "a"
 
 -- Disable swap files
 vim.opt.swapfile = false
 
---vim.opt.showtabline = 2
+vim.opt.showtabline = 2
 vim.opt.laststatus = 2
 
-vim.g.floaterm_shell = "pwsh"
+--vim.g.floaterm_shell = "pwsh"
 
 vim.cmd([[
   autocmd FileType help syntax on

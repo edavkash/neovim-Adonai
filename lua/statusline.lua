@@ -15,8 +15,8 @@ end
 
 -- Set the statusline to dynamically display the mode on the left, filename in the middle, and right-aligned info
 vim.o.statusline = "%#StatusLineMode# %{v:lua.StatusLineMode()} " .. -- Mode part
-                  "%#StatusLine#%=%f%=" ..                         -- Filename in the center
-                  "%l/%L - %c%p%%"                                -- Line, column, and percentage info on the right
+    "%#StatusLine#%=%f%=" ..                                         -- Filename in the center
+    "%l/%L - %c%p%%"                                                 -- Line, column, and percentage info on the right
 
 -- Highlight group for the mode (white text on black background)
 vim.cmd [[
@@ -41,9 +41,6 @@ vim.cmd [[
 -- Tabline configuration: use blue for the tabline
 vim.cmd [[
   highlight TabLine guifg=#ffffff guibg=#005f87
-  highlight TabLineFill guifg=#ffffff guibg=#003366
-  highlight TabLineSel guifg=#ffffff guibg=#005f87
+  highlight TabLineFill guifg=#ffffff guibg=#005f87
+  highlight TabLineSel guifg=#ffffff guibg=#000000
 ]]
-
--- Optional: Always show the tabline if using multiple tabs
-vim.o.showtabline = 2
