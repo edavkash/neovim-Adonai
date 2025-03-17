@@ -41,6 +41,6 @@ vim.cmd [[
 -- Tabline configuration: use blue for the tabline
 vim.cmd [[
   highlight TabLine guifg=#ffffff guibg=#005f87
-  highlight TabLineFill guifg=#ffffff guibg=#005f87
+  highlight TabLineFill guifg=#ffffff guibg=#003366
   highlight TabLineSel guifg=#ffffff guibg=#000000
 ]]
