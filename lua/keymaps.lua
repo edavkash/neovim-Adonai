@@ -16,10 +16,17 @@ vim.keymap.set("n", "<leader>af", ':lua require("harpoon.mark").add_file()<CR>',
 
 --2. Toggling (openning/closing) harpoon UI
 vim.keymap.set(
+<<<<<<< HEAD
     "n",
     "<leader>h",
     ':lua require("harpoon.ui").toggle_quick_menu()<CR>',
     { noremap = true, silent = true },
+=======
+	"n",
+	"<leader>h",
+	':lua require("harpoon.ui").toggle_quick_menu()<CR>',
+	{ noremap = true, silent = true },
+>>>>>>> 14cc39b1f492a2f784fa4a524f5ba04c8fd8afc8
     "n",
     "<leader>h",
     ':lua require("harpoon.ui").toggle_quick_menu()<CR>',
@@ -46,12 +53,20 @@ vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, {})
 vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, {})
 
 --keymap for none_ls used for formatting code
+<<<<<<< HEAD
 --vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+=======
+vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+>>>>>>> 14cc39b1f492a2f784fa4a524f5ba04c8fd8afc8
 
 --Keymap for telescope
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", function()
+<<<<<<< HEAD
     builtin.find_files({ cwd = vim.env.HOME })
+=======
+	builtin.find_files({cwd = vim.env.HOME})
+>>>>>>> 14cc39b1f492a2f784fa4a524f5ba04c8fd8afc8
     builtin.find_files({ cwd = vim.env.HOME })
 end, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
@@ -65,7 +80,11 @@ vim.keymap.set("n", "<space>fb", builtin.git_branches, {})
 
 --Flaoterm keymap
 vim.keymap.set("n", "<leader>fn", function()
+<<<<<<< HEAD
     vim.cmd("FloatermToggle")
+=======
+	vim.cmd("FloatermToggle")
+>>>>>>> 14cc39b1f492a2f784fa4a524f5ba04c8fd8afc8
     vim.cmd("FloatermToggle")
 end)
 
@@ -78,3 +97,7 @@ vim.keymap.set("n", "<leader>i", vim.cmd.InspectTree)
 vim.keymap.set("n", "<leader>eq", vim.cmd.EditQuery)
 --Formatting code
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+<<<<<<< HEAD
+=======
+
+>>>>>>> 14cc39b1f492a2f784fa4a524f5ba04c8fd8afc8

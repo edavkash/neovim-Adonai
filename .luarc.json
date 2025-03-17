@@ -1,5 +1,17 @@
 {
     "diagnostics.globals": [
+<<<<<<< HEAD
         "vim"
+=======
+        "vim",
+        "get_macro_recording_status",
+        "normal_keys"
+    ],
+    "diagnostics.disable": [
+        "unused-local",
+        "undefined-global",
+        "need-check-nil",
+        "duplicate-index"
+>>>>>>> 14cc39b1f492a2f784fa4a524f5ba04c8fd8afc8
     ]
 }

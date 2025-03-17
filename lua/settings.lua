@@ -37,11 +37,14 @@ vim.cmd("syntax enable")
 -- Set auto-indentation
 vim.opt.autoindent = true
 
+<<<<<<< HEAD
 --lagging
 vim.o.ttyfast = true
 vim.o.lazyredraw = true
 vim.o.updatetime = 100
 
+=======
+>>>>>>> 14cc39b1f492a2f784fa4a524f5ba04c8fd8afc8
 -- Enable mouse support (optional)
 vim.opt.mouse = "a"
 
