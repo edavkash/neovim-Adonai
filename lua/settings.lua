@@ -48,7 +48,7 @@ vim.opt.mouse = "a"
 -- Disable swap files
 vim.opt.swapfile = false
 
-vim.opt.showtabline = 2
+--vim.opt.showtabline = 2
 vim.opt.laststatus = 2
 
 --vim.g.floaterm_shell = "pwsh"
@@ -63,15 +63,15 @@ vim.cmd("filetype plugin indent on")
 -- A terminal focus function
 -- Automatically enter insert mode when opening a terminal
 vim.api.nvim_create_autocmd("TermOpen", {
-	pattern = "*",
-	command = "startinsert",
+    pattern = "*",
+    command = "startinsert",
 })
 
 --transparent background
 function Font_color(color)
-	vim.cmd.colorscheme(color)
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none", bold = true })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    vim.cmd.colorscheme(color)
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none", bold = true })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
 --Font_color("cyberdream")
