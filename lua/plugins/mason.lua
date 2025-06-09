@@ -71,6 +71,10 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.clangd.setup({
+                init_options = {
+                    fallbackFlags = {
+                    },
+                },
                 capabilities = capabilities,
             })
             lspconfig.ast_grep.setup({
@@ -120,53 +124,7 @@ return {
             })
         end,
     },
-    {
-        "mfussenegger/nvim-dap",
-        config = function()
-            local dap = require("dap")
-            dap.adapters.gdb = {
-                type = "executable",
-                command = "gdb",
-                args = { "--interpreter=dap", "--eval-command", "set print pretty on" }
-            }
-            dap.configurations.c = {
-                {
-                    name = "Launch",
-                    type = "gdb",
-                    request = "launch",
-                    program = function()
-                        return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-                    end,
-                    cwd = "${workspaceFolder}",
-                    stopAtBeginningOfMainSubprogram = false,
-                },
-                {
-                    name = "Select and attach to process",
-                    type = "gdb",
-                    request = "attach",
-                    program = function()
-                        return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-                    end,
-                    pid = function()
-                        local name = vim.fn.input('Executable name (filter): ')
-                        return require("dap.utils").pick_process({ filter = name })
-                    end,
-                    cwd = '${workspaceFolder}'
-                },
-                {
-                    name = 'Attach to gdbserver :1234',
-                    type = 'gdb',
-                    request = 'attach',
-                    target = 'localhost:1234',
-                    program = function()
-                        return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-                    end,
-                    cwd = '${workspaceFolder}'
-                },
-            }
-        end
-    },
-    {
+    --[[ {
         "rcarriga/nvim-dap-ui",
         dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
         config = function()
@@ -195,5 +153,5 @@ return {
             vim.keymap.set("n", "<Leader>de", function() dapui.eval() end, opts)
             vim.keymap.set("v", "<Leader>de", function() dapui.eval() end, opts)
         end,
-    }
+    }]] --
 }

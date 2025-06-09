@@ -10,6 +10,9 @@ vim.g.jupyter_cell_separators = true
 -- Enable line numbers
 vim.opt.number = true
 
+--Set List
+vim.opt.list=true
+
 --Enable relative number
 vim.opt.relativenumber = true
 

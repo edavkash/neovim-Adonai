@@ -17,7 +17,8 @@ return {
             lua = { "stylua" },
             python = { "isort", "black" },
             javascript = { "prettierd", "prettier", stop_after_first = true },
-            c = { "astyle" }
+            c = { "astyle" },
+            sh = { "shfmt" }
         },
         default_format_opts = {
             lsp_format = "fallback",
@@ -26,6 +27,13 @@ return {
         formatters = {
             shfmt = {
                 prepend_args = { "-i", "2" },
+            },
+            astyle = {
+                prepend_args = {
+                    "--style=kr",
+                    "--indent=spaces=2",
+                    "--suffix=none"
+                },
             },
         },
     },
