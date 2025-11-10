@@ -4,6 +4,9 @@ vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 --Entering Ex command-line
 vim.keymap.set("n", "|", "q:")
 
+--Quiting a neovim session
+vim.keymap.set("n", "Q", ":q!")
+
 --Neo-tree keymap
 vim.keymap.set("n", "<leader>nl", ":Neotree filesystem reveal left<CR>")
 
@@ -17,8 +20,6 @@ end, { desc = "Format C file with astyle" })
 --fzf keymap
 vim.keymap.set("n", "<s-P>", "<cmd>lua require('fzf-lua').files()<CR>", { silent = true })
 
---git_integration keymap
-vim.keymap.set("n", "<leader>gh", ":Gitsigns.preview_hunk<CR>", {})
 
 --harpoon.lua keymap
 --1. Adding a file in file in harpoon
@@ -46,8 +47,11 @@ vim.keymap.set("n", "<leader><Down>", ':lua require("harpoon.ui").nav_next()<CR>
 --4.Navigate to the previous bookmark
 vim.keymap.set("n", "<leader><Up>", ':lua require("harpoon.ui").nav_prev()<CR>', { noremap = true, silent = true })
 
---5. keymap to open lazygit
+--5. keymap for git integration
 vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>gh", ":Gitsigns.preview_hunk<CR>", {})
+vim.keymap.set("n", "_l", ":split | enew | r !git log --oneline<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "_s", ":split | enew | r !git status<CR>", { noremap = true, silent = true })
 
 --6. mason keymap
 --show snippet functionality

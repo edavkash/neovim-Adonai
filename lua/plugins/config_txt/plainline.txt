@@ -3,6 +3,7 @@ return
     "eduardo-antunes/plainline",
     config = function()
         require("plainline").setup({
+
             sections = {
                 left  = { "mode", "branch", "name", "diagnostics" },
                 right = { "macro", "filetype", "fileformat", "percentage", "position" },
@@ -11,7 +12,7 @@ return
                 left  = { "path" },
                 right = { "percentage" },
             },
-            separator = "  ",
+            separator = " │ ",
             formatter = function(component)
                 return string.format(" %s ", component)
             end

@@ -1,11 +1,12 @@
-return {
-    'mfussenegger/nvim-dap',
+return
+{
+    "mfussenegger/nvim-dap",
     config = function()
-        local dap = require('dap')
+        local dap = require("dap")
         dap.adapters.gdb = {
-            type = 'executable',
-            command = 'gdb',
-            args = { '--interpreter=dap', '--eval-command', 'set print pretty on' }
+            type = "executable",
+            command = "gdb",
+            args = { "--interpreter=dap", "--eval-command", "set print pretty on" }
         }
         dap.configurations.c = {
             {
@@ -15,6 +16,7 @@ return {
                 program = function()
                     return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
                 end,
+                args = {},
                 cwd = "${workspaceFolder}",
                 stopAtBeginningOfMainSubprogram = false,
             },
@@ -40,7 +42,7 @@ return {
                     return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
                 end,
                 cwd = '${workspaceFolder}'
-            },
+            }
         }
     end
 };
